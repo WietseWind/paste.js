@@ -258,9 +258,6 @@ https://github.com/layerssss/paste.js
       this._container.on('paste', (function(_this) {
         return function(ev) {
           var _i, clipboardData, file, fileType, item, j, k, l, len, len1, len2, pastedFilename, reader, ref, ref1, ref2, ref3, ref4, stringIsFilename, text;
-          if (ev.currentTarget !== ev.target) {
-            return ev.preventDefault();
-          }
           _this.originalEvent = (ev.originalEvent !== null ? ev.originalEvent : null);
           _this._paste_event_fired = true;
           if (((ref = ev.originalEvent) != null ? ref.clipboardData : void 0) != null) {
