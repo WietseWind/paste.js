@@ -172,7 +172,8 @@ class Paste
           # Chrome or any other browsers with DataTransfer.items implemented
           @originalEvent.pastedTypes = []
           for item in clipboardData.items
-            @originalEvent.pastedTypes.push(item.type)
+            if item.type.match(/^text\/(plain|rtf|html)/) 
+              @originalEvent.pastedTypes.push(item.type)
           for item, _i in clipboardData.items
             if item.type.match /^image\//
               reader = new FileReader()

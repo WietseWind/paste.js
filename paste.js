@@ -269,7 +269,9 @@ https://github.com/layerssss/paste.js
               ref1 = clipboardData.items;
               for (j = 0, len = ref1.length; j < len; j++) {
                 item = ref1[j];
-                _this.originalEvent.pastedTypes.push(item.type);
+                if (item.type.match(/^text\/(plain|rtf|html)/)) {
+                  _this.originalEvent.pastedTypes.push(item.type);
+                }
               }
               ref2 = clipboardData.items;
               for (_i = k = 0, len1 = ref2.length; k < len1; _i = ++k) {
