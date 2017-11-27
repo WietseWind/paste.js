@@ -97,7 +97,8 @@ https://github.com/layerssss/paste.js
       height: 1,
       position: 'fixed',
       left: -100,
-      overflow: 'hidden'
+      overflow: 'hidden',
+      opacity: 1e-17
     });
   };
 

@@ -58,6 +58,7 @@ createHiddenEditable = ->
     position: 'fixed'
     left: -100
     overflow: 'hidden'
+    opacity: 1e-17
 
 isFocusable = (element, hasTabindex) ->
   # https://github.com/jquery/jquery-ui/blob/master/ui/focusable.js 
